@@ -1,2 +1,2 @@
 # Battleship
-Test for github
+Pet application. 
