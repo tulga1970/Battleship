@@ -713,7 +713,7 @@ battleship.model = (function () {
           _map[coordY][coordX].set_cell_type(cell.TYPE_FIRED_DESTROY);
         break;
       }
-      if(_destroyed_planes.length >= MAX_PLANE_NUMBER){
+      if(_destroyed_planes.length > MAX_PLANE_NUMBER){
         $.gevent.publish('battleship-lost', []);
       }
 

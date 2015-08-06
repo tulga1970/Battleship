@@ -18,13 +18,13 @@ battleship.arena = (function () {
   var
     configMap = {
       main_html : String()
-        +'<div href="" class="battleship-btn-start-quick-play">quick play</div>'
+        +'<div class="battleship-btn-start-quick-play">quick play</div>'
         +'<br class="clear br-2">'
       	+'<ul class="battleship-battle-planelist">'
-      		+'<li ><img src="../imgs/plane-up.png" direction="up"/></li>'
-      		+'<li ><img src="../imgs/plane-right.png" direction="right"/></li>'
-      		+'<li ><img src="../imgs/plane-down.png" direction="down"/></li>'
-      		+'<li ><img src="../imgs/plane-left.png" direction="left"/></li>'
+      		+'<li class="planelist-item up" data-direction="up"></li>'
+      		+'<li class="planelist-item right" data-direction="right"></li>'
+      		+'<li class="planelist-item down" data-direction="down"></li>'
+      		+'<li class="planelist-item left" data-direction="left"></li>'
       	+'</ul>'
         +'<div class="battleship-battle-arena-cont">'
           +'<div id="my-arena" class="battleship-battle-arena"></div>'
@@ -344,13 +344,13 @@ battleship.arena = (function () {
   onTapPlaneListItem = function (event){
   	var $tapped  = $( event.elem_target );
 
-  	jqueryMap.$planes_list.find('li img').each(function(){
+  	jqueryMap.$planes_list.find('li').each(function(){
   		$(this).removeClass('selected');
   	});
 
   	$tapped.addClass('selected');
 
-    stateMap.current_direction = $tapped.attr( 'direction' );
+    stateMap.current_direction = $tapped.data( 'direction' );
     return false;
   };
 

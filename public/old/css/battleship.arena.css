@@ -1,0 +1,96 @@
+/*
+ * battleship.arena.css
+ * arena feature styles
+*/
+.battleship-battle-arena-cont{
+	float: left;
+}
+
+.battleship-timer-bar{
+	width: 331px;
+	height: 3px;
+	background: green;
+	margin-left: 40px;
+	display: none;
+}
+
+.battleship-battle-planelist{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+
+.battleship-battle-planelist li.planelist-item{
+	cursor: pointer;
+	width : 88px;
+	height : 88px;
+	margin-bottom: 5px;
+}
+
+.battleship-battle-planelist li.planelist-item:last-child{
+	margin-bottom: 0px;
+}
+
+.battleship-battle-planelist li.planelist-item:hover{
+	opacity: 0.5;
+}
+
+.battleship-battle-planelist li.planelist-item:selected{
+	opacity: 0.7;
+}
+
+.battleship-battle-planelist li.planelist-item.up{
+	height : 70px;
+	background : url("../imgs/planes.png") 0 0;
+}
+
+.battleship-battle-planelist li.planelist-item.down{
+	height : 70px;
+	background : url("../imgs/planes.png") 0 -71px;
+}
+
+.battleship-battle-planelist li.planelist-item.left{
+	height : 88px;
+	background : url("../imgs/planes.png") 0 -142px;
+}
+
+.battleship-battle-planelist li.planelist-item.right{
+	height : 88px;
+	background : url("../imgs/planes.png") 0 -231px;
+}
+
+.battleship-battle-planelist li.planelist-item img:hover{
+	opacity: 0.5;
+}
+
+.battleship-battle-planelist li img.selected{
+	opacity: 0.7;
+}
+
+.battleship-battle-arena#my-arena table{
+	background-color: #fff;
+}
+
+.battleship-battle-arena table{
+	border-collapse: collapse;	
+	margin-left: 40px;
+	text-align: center;
+}
+
+.battleship-battle-arena:first-child{
+	margin-left: 0px;
+}
+
+.battleship-battle-arena table td {
+	height: 30px;
+	width: 30px;
+	border: 1px solid #ababab;
+}
+
+.battleship-battle-arena table td .plane-cell{
+	width : 100%;
+	height : 100%;
+	color: #fff;
+	text-align: center;
+}
